@@ -1,9 +1,27 @@
-<%= @guest.name %>
+<head>
+<title> Actors Page! </title>
+<style>
 
-<%= @guest.occupation %>
+    #whyNot {
+        font-size: 50px;
+    }
+    #whyNot2 {
+        font-size: 45px;
+    }
 
-<% episodesArray = @guest.episodes %>
-<% episodesArray.each do |episode| %>
-<%= "Episode Number: #{episode.number} - Episode Date:#{episode.date}"%>
+    
+
+</style>
+
+</head>
+
+<h1 id="whyNot"> <%= @guest.name %><br> </h1>
+
+<h1 id="whyNot2"> Is an: <%= @guest.occupation %> </h1> 
+<h1>With the following episodes: </h1>
+<% episodesArray = @guest.episodes %><br>
+<% episodesArray.each do |episode| %><br>
+<%= "Episode Number: #{episode.number} - Episode Date:#{episode.date}"%><br>
 <% end %>
+
 
