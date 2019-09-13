@@ -2,6 +2,7 @@
 
 <ul>
   <% @episodes.each do |episode| %>
-    <li><%= "Episode #{episode.number} - #{episode.date.strftime("%B %d, %Y")}"%></li>
+    
+  <a href="episodes/<%=episode.id%>"><li><%= "Episode Number: #{episode.number} - Episode Date:#{episode.date}"%></li></a>
   <% end %>
 </ul>

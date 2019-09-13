@@ -1,0 +1,10 @@
+<%= @episode.date %>
+
+<%= @episode.number %>
+
+<% guests = @episode.guests %>
+<% guests.each do |guest| %>
+
+<a href="/guests/<%=guest.id%>"><%= guest.name %></a>
+
+<% end %>

@@ -1,0 +1,9 @@
+<%= @guest.name %>
+
+<%= @guest.occupation %>
+
+<% episodesArray = @guest.episodes %>
+<% episodesArray.each do |episode| %>
+<%= "Episode Number: #{episode.number} - Episode Date:#{episode.date}"%>
+<% end %>
+

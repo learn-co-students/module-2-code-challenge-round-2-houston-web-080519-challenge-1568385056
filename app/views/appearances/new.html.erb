@@ -1,0 +1,29 @@
+<form action = "/appearances" method = POST>
+<label for = "name">Episode</label>
+<select name = "episode_id">
+<%@episodes.each do |episode| %>
+    <option value = "<%= episode.id%>"><%= "Episode Number: #{episode.number} - Episode Date:#{episode.date}"%></option>
+<%end%>
+<br>
+</select>
+
+<br>
+<label for = "description">Guest</label>
+<select name = "guest_id">
+<%@guests.each do |guest|%>
+    <option value = "<%=guest.id%>"><%= "Guest Name: #{guest.name} - Guest Occupation:#{guest.occupation}"%></option>
+<%end%>
+<br>
+</select>
+<br>
+<label for = "description">Rating</label>
+<select name = "guest">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+</select>
+<br>
+<input type = "submit" value = "Create Appearance"/>
+</form>

@@ -1,0 +1,15 @@
+<form action = "/guests" method = POST>
+<label for = "name">Name</label>
+<input id = "name" type = "text" name = "name" required = "required"/>
+<label for = "description">Occupation</label>
+<input id = "occupation" type = "text" name = "occupation" required = "required"/>
+
+<label for = "id">Choose an episode!</label>
+<select name = "idd">
+<% @episodes.each do |episode| %>
+    <option value = "<%= episode.id%>"><%= episode.number%></option>
+<%end%>
+<select>
+
+<input type = "submit" value = "Submit"/>
+</form>
