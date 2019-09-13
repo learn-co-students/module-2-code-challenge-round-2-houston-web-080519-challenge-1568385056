@@ -1,0 +1,38 @@
+<h1> Herrreee's a New Apperance </h1>
+<br>
+<form method="POST" action="/ratings">
+
+<label> GUEST </label> 
+
+<div>
+    <select name="guest_id">
+            <% Guest.all.each do |guest| %>
+            <option value="<%=guest.id%>"> <%= guest.name %>
+            <%end%>
+            </option>
+    </select>
+</div>
+
+<br>
+
+<label> EPISODE </label>
+
+<div>
+    <select name="episode_id">
+            <% Episode.all.each do |episode| %>
+            <option value="<%= episode.id %>"> <%= episode.number %>
+            <% end %>
+            </option>
+    </select>
+</div>
+
+<br>
+
+<label> RATING </label>
+
+<div> 
+    <input type="number" min="1" max="5" name="rating_number">
+</div>
+
+<input type="submit">
+</form>
